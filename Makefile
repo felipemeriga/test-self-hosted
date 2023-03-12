@@ -7,7 +7,7 @@ run:
 	go run .
 
 localbox-build:
-	GOARCH=amd64 GOOS=linux go build -o build/lec .
+	GOARCH=amd64 GOOS=linux /opt/homebrew/Cellar/go/1.18.3/libexec/bin/go build -o build/lec .
 
 localbox-test-copy:
 	cp -r build/lec ~/local-encoder-controller/lec
