@@ -1,4 +1,4 @@
-name: CI Check
+name: Deploy local encoder controller
 on:
   push:
     paths-ignore:
@@ -12,3 +12,7 @@ jobs:
         uses: actions/checkout@v2
         with:
           fetch-depth: 0
+      - name: Run localbox-build
+        run: make localbox-build
+      - name: Run localbox-test-copy
+        run: make localbox-test-copy
